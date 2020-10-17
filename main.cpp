@@ -14,7 +14,7 @@ int dirCount;
 bool fileCreate;
 
 template <typename T>
-std::string to_string ( T Number )
+std::string to_string (T Number)
 {
      std::ostringstream ss;
      ss << Number;
@@ -26,7 +26,7 @@ int strToInt(string text) {
     int number = 0;
     
     for (int i = 0; i < text.length(); i++) {
-        charCode = (int)text[i];
+        charCode = (int) text[i];
         
         if (charCode < 48 || charCode > 57) {
             throw 20;
@@ -50,7 +50,6 @@ int inputNumber(string additionalText = "") {
         
         if (input.length() == 0) {
             cout << "Please insert a number!" << endl << endl << endl;
-            
             continue;
         }    
         
@@ -98,7 +97,7 @@ int getDirSum()
     int sum = 0;
     
     for (int i = dirLayer; i > 0; i--) {
-        sum += pow((double)dirCount, (double)i);
+        sum += pow((double) dirCount, (double) i);
     }
     
     return sum;    
@@ -130,7 +129,7 @@ int main(int argc, char *argv[])
     cout << "sum: " << getDirSum() << " directories" << endl;
     cout << "file create: " << fileCreate << endl << endl;
     
-    cout << "Please insert your consent(y/n): ";
+    cout << "Please enter your consent(y/n): ";
     cin >> consent;
     
     if (consent == "y") {
