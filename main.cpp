@@ -65,21 +65,18 @@ int inputNumber(string additionalText = "") {
     } while (true);
 }
 
-void createFile(string path)
-{
+void createFile(string path) {
     string filePath = path + "/README.txt";
     ofstream file (filePath.c_str());
     file << path << endl;
     file.close();
 }
 
-int createDirs(string path, int currLevel)
-{
+int createDirs(string path, int currLevel) {
     for (int i = 0; i < dirCount; i++) {
         string currPath = path + "/" + to_string(i);
         
-        if (mkdir(currPath.c_str()) != 0)
-        {
+        if (mkdir(currPath.c_str()) != 0) {
             cout << "error creating " << currPath << endl;
         }
         
@@ -92,8 +89,7 @@ int createDirs(string path, int currLevel)
     }
 }     
 
-int getDirSum()
-{
+int getDirSum() {
     int sum = 0;
     
     for (int i = dirLayer; i > 0; i--) {
@@ -103,8 +99,7 @@ int getDirSum()
     return sum;    
 }    
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     string consent = "n";
     string input = "";
     
